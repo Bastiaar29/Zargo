@@ -1,0 +1,186 @@
+/* Contenedor principal */
+.recursos-humanos {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que ocupa toda la pantalla */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0A2EE8; /* Fondo azul */
+  color: white; /* Texto blanco */
+  padding: 0 20px;
+  height: 60px; /* Altura fija */
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-center {
+  flex: 1; /* Ocupa el espacio central */
+  text-align: center;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  color: white; /* Texto blanco */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  font-size: 1.8rem; /* Tamaño del ícono */
+  margin-right: 10px;
+}
+
+.navbar-user {
+  font-size: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px; /* Justo debajo del navbar */
+  left: 0;
+  width: 250px; /* Ancho del menú lateral */
+  height: calc(100vh - 140px); /* Altura entre navbar y footer */
+  background-color: #7FE8EF; /* Fondo del menú lateral */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scroll si el contenido es demasiado largo */
+  padding: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: black; /* Texto negro */
+  cursor: pointer;
+}
+
+.sidebar-menu li i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Contenido principal */
+.main-content {
+  margin-left: 250px; /* Espacio para el menú lateral */
+  flex: 1;
+  padding: 20px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Espaciado inferior para la tabla */
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 250px);
+}
+
+.search-input {
+  flex: 3;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px 0 0 8px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.filter-button {
+  flex: 1;
+  background-color: #0A2EE8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #064bb4;
+}
+
+/* Tabla */
+.data-table {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #0A2EE8;
+  color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.options-button {
+  background-color: #0A2EE8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.options-button:hover {
+  background-color: #064bb4;
+}
