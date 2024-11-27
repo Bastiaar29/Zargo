@@ -80,10 +80,18 @@ WSGI_APPLICATION = 'zargo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'PostgreSqlFlexibleServer_85c783074b7343cab36b26365aae8968',  # O el nombre de tu base de datos
+        'USER': 'benjamin@PostgreSqlFlexibleServer_85c783074b7343cab36b26365aae896',
+        'PASSWORD': 'Vegeta777',
+        'HOST': 'PostgreSqlFlexibleServer_85c783074b7343cab36b26365aae896.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',  # Asegura la conexión SSL
+        },
     }
 }
+
 
 
 # Password validation

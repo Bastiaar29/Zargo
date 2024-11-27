@@ -15,7 +15,7 @@ const RecursosHumanos = () => {
           </button>
         </div>
         <div className="navbar-center">
-          <h1 className="navbar-title">recursos humanos</h1>
+          <h1 className="navbar-title">Recursos Humanos</h1>
         </div>
         <div className="navbar-right">
           <i className="fas fa-user-circle user-icon"></i>
@@ -79,11 +79,11 @@ const RecursosHumanos = () => {
             </thead>
             <tbody>
               <tr>
-                <td><span className="status-dot"></span> 3</td>
-                <td>Michael</td>
-                <td>1234568.9</td>
-                <td>8:00 am/18:00 pm</td>
-                <td>Inactivo</td>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>RUT</th>
+                <th>Hora entrada/salida</th>
+                <th>Estado</th>
                 <td><button className="options-button">Opciones</button></td>
               </tr>
             </tbody>
@@ -94,19 +94,13 @@ const RecursosHumanos = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-left">
-          <img src="https://via.placeholder.com/100x40" alt="Logo Zargo" className="footer-logo" />
+          <img src={logo} alt="Logo Zargo" className="footer-logo" />
         </div>
         <div className="footer-center">
           <p>Copyright © 2024 Zargo. All rights reserved.</p>
         </div>
         <div className="footer-right">
-          <i className="fas fa-map-marker-alt location-icon"></i>
-          <div className="footer-address">
-            <p>Panamericana Norte</p>
-            <p>Km. 800</p>
-            <p>Copiapó</p>
-            <p>Región de Atacama</p>
-          </div>
+
         </div>
       </footer>
     </div>

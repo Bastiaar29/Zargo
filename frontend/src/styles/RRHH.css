@@ -58,50 +58,32 @@
   top: 60px; /* Justo debajo del navbar */
   left: 0;
   width: 250px; /* Ancho del menú lateral */
-  height: calc(100vh - 140px); /* Altura entre navbar y footer */
+  height: calc(100vh - 60px); /* Altura completa menos el navbar */
   background-color: #7FE8EF; /* Fondo del menú lateral */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   overflow-y: auto; /* Scroll si el contenido es demasiado largo */
   padding: 20px;
-}
-
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-menu li {
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  color: black; /* Texto negro */
-  cursor: pointer;
-}
-
-.sidebar-menu li i {
-  margin-right: 10px;
-  font-size: 1.2rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenido principal */
 .main-content {
   margin-left: 250px; /* Espacio para el menú lateral */
-  flex: 1;
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Alineación vertical */
+  gap: 20px; /* Espacio entre buscar y tabla */
 }
 
 /* Barra de búsqueda */
 .search-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Espaciado inferior para la tabla */
   padding: 10px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 250px);
+  width: 100%;
 }
 
 .search-input {
@@ -113,10 +95,6 @@
   border-radius: 8px 0 0 8px;
 }
 
-.search-input::placeholder {
-  color: #aaa;
-}
-
 .filter-button {
   flex: 1;
   background-color: #0A2EE8;
@@ -126,17 +104,11 @@
   font-size: 1rem;
   border-radius: 0 8px 8px 0;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.filter-button:hover {
-  background-color: #064bb4;
 }
 
 /* Tabla */
 .data-table {
-  width: calc(100% - 250px);
-  margin-left: 250px;
+  width: 100%; /* Ocupa todo el ancho */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -181,6 +153,33 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-.options-button:hover {
-  background-color: #064bb4;
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; /* Fondo negro */
+  color: white;
+  padding: 10px 20px;
+  height: 50px; /* Altura fija */
+  width: 100%; /* Ahora ocupa todo el ancho de la ventana */
+  position: relative; /* Para evitar superposición */
+}
+
+.footer-left img {
+  height: 40px; /* Ajusta el tamaño del logo */
+}
+
+.footer-center p {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-right {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.footer-right i {
+  margin-right: 5px;
 }
